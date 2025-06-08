@@ -1,6 +1,6 @@
 # 👋 Hi, I’m Chandra Prakash Bathula
 
-🚀 Machine Learning Practioner | CV/NLP-LLM Researcher | Developer | Storyteller
+🚀 Machine Learning Practioner | CV/NLP-LLM Researcher | Web Developer | Storyteller
 
 I'm on a mission to make machine learning accessible, interpretable, and impactful — from healthcare and education to fraud detection and beyond.
 
