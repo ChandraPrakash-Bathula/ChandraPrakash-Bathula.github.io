@@ -1,6 +1,6 @@
 # 👋 Hi, I’m Chandra Prakash Bathula
 
-🚀 Machine Learning Practitioner | AI/CV/NLP-LLM Researcher | Web Developer | Storyteller
+🚀 Full Stack Web Developer [MongoDB, Express.js, React.js, Node.js] | Machine Learning Practitioner | AI/CV/NLP-LLM Researcher | Storyteller
 
 I'm on a mission to make machine learning accessible, interpretable, and impactful — from healthcare and education to fraud detection and beyond.
 
