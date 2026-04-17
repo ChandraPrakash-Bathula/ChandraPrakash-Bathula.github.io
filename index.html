@@ -11,6 +11,16 @@
     name="keywords"
     content="Chandra Prakash Bathula, AI Engineer, Machine Learning, RAG, LangChain, FastAPI, React, Saint Louis University"
   />
+  <meta name="author" content="Chandra Prakash Bathula" />
+  <meta name="theme-color" content="#006d77" />
+  <meta property="og:title" content="Chandra Prakash Bathula | AI/ML Engineer" />
+  <meta
+    property="og:description"
+    content="AI/ML Engineer, Adjunct Faculty, and Full-Stack Developer building practical machine learning systems."
+  />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="Profile.jpeg" />
+  <meta name="twitter:card" content="summary_large_image" />
   <title>Chandra Prakash Bathula | AI/ML Engineer</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -344,11 +354,88 @@
       font-size: 0.82rem;
     }
 
+    .actions {
+      margin-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .button-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+      background: #e6f3ef;
+      color: var(--brand-strong);
+      border: 1px solid #b8dbd4;
+      border-radius: 999px;
+      padding: 6px 11px;
+      font-size: 0.83rem;
+      font-weight: 700;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+
+    .button-link:hover,
+    .button-link:focus {
+      background: #d8ede7;
+      transform: translateY(-1px);
+    }
+
+    .hf-grid {
+      margin-top: 14px;
+      display: grid;
+      gap: 10px;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+
+    .hf-card {
+      border: 1px solid var(--line);
+      background: #fff;
+      border-radius: 12px;
+      padding: 12px;
+      display: grid;
+      gap: 7px;
+    }
+
+    .hf-card h4 {
+      font-size: 0.95rem;
+      margin: 0;
+    }
+
+    .hf-card p {
+      font-size: 0.86rem;
+      margin: 0;
+    }
+
     .footer-note {
       text-align: center;
       color: var(--muted);
       font-size: 0.86rem;
       margin-top: 18px;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -9999px;
+      top: 0;
+      background: #fff;
+      color: #111;
+      padding: 10px 14px;
+      border-radius: 8px;
+      z-index: 1000;
+      border: 1px solid var(--line);
+    }
+
+    .skip-link:focus {
+      left: 14px;
+      top: 12px;
+    }
+
+    a:focus-visible {
+      outline: 2px solid var(--brand);
+      outline-offset: 2px;
+      border-radius: 6px;
     }
 
     @keyframes rise {
@@ -402,6 +489,7 @@
   </style>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   <div class="layout">
     <header class="topbar">
       <nav aria-label="Section navigation">
@@ -418,7 +506,7 @@
 
     <div class="grid">
       <aside class="sidebar" aria-label="Profile">
-        <img src="Profile.jpeg" alt="Portrait of Chandra Prakash Bathula" class="photo" />
+        <img src="Profile.jpeg" alt="Portrait of Chandra Prakash Bathula" class="photo" width="132" height="132" fetchpriority="high" />
         <h1 class="name">Chandra Prakash Bathula</h1>
         <p class="role">AI/ML Engineer, Adjunct Faculty, and Full-Stack Developer</p>
 
@@ -433,20 +521,20 @@
           <li><strong>Email:</strong> <a href="mailto:chandraprakash.bathula@slu.edu">chandraprakash.bathula@slu.edu</a></li>
           <li><strong>Phone:</strong> +1 (314) 723-0206</li>
           <li><strong>Location:</strong> St. Louis, MO</li>
-          <li><strong>Profiles:</strong> <a href="https://www.linkedin.com/in/chandra-prakash-bathula/">LinkedIn</a> | <a href="https://portfolio-chandra-prakash-bathulas-projects.vercel.app/">Personal Website</a> | <a href="https://huggingface.co/">HuggingFace</a></li>
+          <li><strong>Profiles:</strong> <a href="https://www.linkedin.com/in/chandra-prakash-bathula/" target="_blank" rel="noopener noreferrer">LinkedIn</a> | <a href="https://portfolio-chandra-prakash-bathulas-projects.vercel.app/" target="_blank" rel="noopener noreferrer">Personal Website</a> | <a href="https://huggingface.co/ChandraPrakashBathula" target="_blank" rel="noopener noreferrer">HuggingFace</a></li>
           <li><strong>Resume:</strong> <a href="Chandra_Prakash_Bathula__.pdf" target="_blank" rel="noopener noreferrer">Download PDF</a></li>
         </ul>
 
         <div class="social" aria-label="Social links">
-          <a href="https://github.com/ChandraPrakash-Bathula" aria-label="GitHub" title="GitHub"><i class="fab fa-github"></i></a>
-          <a href="https://www.linkedin.com/in/chandra-prakash-bathula/" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-          <a href="https://portfolio-chandra-prakash-bathulas-projects.vercel.app/" aria-label="Portfolio" title="Portfolio"><i class="fas fa-globe"></i></a>
-          <a href="https://huggingface.co/" aria-label="HuggingFace" title="HuggingFace"><i class="fas fa-robot"></i></a>
-          <a href="https://scholar.google.com/citations?user=PuvoWIwAAAAJ" aria-label="Google Scholar" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+          <a href="https://github.com/ChandraPrakash-Bathula" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/chandra-prakash-bathula/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://portfolio-chandra-prakash-bathulas-projects.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Portfolio" title="Portfolio"><i class="fas fa-globe"></i></a>
+          <a href="https://huggingface.co/ChandraPrakashBathula" target="_blank" rel="noopener noreferrer" aria-label="HuggingFace" title="HuggingFace"><i class="fas fa-robot"></i></a>
+          <a href="https://scholar.google.com/citations?user=PuvoWIwAAAAJ" target="_blank" rel="noopener noreferrer" aria-label="Google Scholar" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
         </div>
       </aside>
 
-      <main class="main">
+      <main class="main" id="main-content">
         <section class="card hero" id="summary" aria-label="Professional summary">
           <span class="badge">Available for AI/ML engineering and research opportunities</span>
           <h2 class="hero-title">Building practical, scalable AI systems from research to deployment.</h2>
@@ -499,24 +587,55 @@
               <h3>Agentic RAG Automation</h3>
               <p class="meta">Gmail, Google Drive, WhatsApp, OpenAI, LangChain, pgvector</p>
               <p>Production multi-agent workflow using Gmail and Google Drive as private RAG knowledge sources, with automated context-aware email drafting and WhatsApp alerts for unresolved queries.</p>
+              <div class="actions">
+                <a class="button-link" href="https://huggingface.co/ChandraPrakashBathula/Image_Captioning" target="_blank" rel="noopener noreferrer">Open Image_Captioning Model</a>
+              </div>
             </article>
 
             <article class="item">
               <h3>Research Retrieval Agent</h3>
               <p class="meta">ArXiv, DuckDuckGo, OpenAI Function Calling</p>
               <p>Autonomous multi-agent system that retrieves five or more research papers, extracts metadata, summarizes findings, and generates structured insights.</p>
+              <div class="actions">
+                <a class="button-link" href="https://huggingface.co/spaces/ChandraPrakashBathula/mlp-mnist-draw" target="_blank" rel="noopener noreferrer">Explore Demo Space</a>
+              </div>
             </article>
 
             <article class="item">
               <h3>Food-101 Image Classifier</h3>
               <p class="meta">ResNet-50, PyTorch, HuggingFace Hub, Gradio, torchvision</p>
               <p>Fine-tuned ImageNet-pretrained ResNet-50 on 101K Food-101 images across 101 classes for 100 epochs, surpassing 80% accuracy and deploying a real-time Gradio demo on HuggingFace Spaces.</p>
+              <div class="actions">
+                <a class="button-link" href="https://huggingface.co/spaces/ChandraPrakashBathula/food101_resnet" target="_blank" rel="noopener noreferrer">Open food101_resnet Space</a>
+                <a class="button-link" href="https://huggingface.co/ChandraPrakashBathula/Food_101_Classification_ResNet50" target="_blank" rel="noopener noreferrer">Open Food_101 Model</a>
+              </div>
             </article>
 
             <article class="item">
               <h3>Apparel Recommendation Engine</h3>
               <p class="meta">Keras, Word2Vec, TF-IDF, VGG-CNN, GPU</p>
               <p>Content-based recommender over 180K+ Amazon apparel images benchmarking seven retrieval strategies, including TF-IDF, Word2Vec, and VGG-CNN visual features with GPU-accelerated K-Means segmentation.</p>
+              <div class="actions">
+                <a class="button-link" href="https://huggingface.co/spaces/ChandraPrakashBathula/SVM_AmazonReviews_Classification" target="_blank" rel="noopener noreferrer">Open SVM_AmazonReviews Space</a>
+              </div>
+            </article>
+          </div>
+
+          <div class="hf-grid" aria-label="HuggingFace highlights">
+            <article class="hf-card">
+              <h4>Model Hub</h4>
+              <p>Explore published models and checkpoints.</p>
+              <a class="button-link" href="https://huggingface.co/ChandraPrakashBathula/CIFAR10-CNN_Model" target="_blank" rel="noopener noreferrer">Open CIFAR10-CNN_Model</a>
+            </article>
+            <article class="hf-card">
+              <h4>Spaces</h4>
+              <p>Try interactive demos and inference apps.</p>
+              <a class="button-link" href="https://huggingface.co/spaces/ChandraPrakashBathula/cifar10-cnn-demo" target="_blank" rel="noopener noreferrer">Open cifar10-cnn-demo</a>
+            </article>
+            <article class="hf-card">
+              <h4>Featured Model</h4>
+              <p>See an additional deployed prediction model.</p>
+              <a class="button-link" href="https://huggingface.co/ChandraPrakashBathula/nyc-taxi-predictor" target="_blank" rel="noopener noreferrer">Open nyc-taxi-predictor</a>
             </article>
           </div>
         </section>
@@ -572,5 +691,29 @@
 
     <p class="footer-note">Last updated April 2026</p>
   </div>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Chandra Prakash Bathula",
+      "jobTitle": "AI/ML Engineer",
+      "email": "mailto:chandraprakash.bathula@slu.edu",
+      "telephone": "+1-314-723-0206",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Saint Louis",
+        "addressRegion": "MO",
+        "addressCountry": "US"
+      },
+      "url": "https://portfolio-chandra-prakash-bathulas-projects.vercel.app/",
+      "sameAs": [
+        "https://github.com/ChandraPrakash-Bathula",
+        "https://www.linkedin.com/in/chandra-prakash-bathula/",
+        "https://huggingface.co/ChandraPrakashBathula",
+        "https://scholar.google.com/citations?user=PuvoWIwAAAAJ"
+      ]
+    }
+  </script>
 </body>
 </html>
