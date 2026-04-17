@@ -1,496 +1,576 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description"
-        content="Personal website of Chandra Prakash Bathula, Machine Learning Engineer and Adjunct Faculty at Saint Louis University, showcasing expertise in AI, NLP, and education." />
-    <meta name="keywords"
-        content="Chandra Prakash Bathula, Machine Learning, AI, NLP, Saint Louis University, Adjunct Faculty, Data Science" />
-    <title>Chandra Prakash Bathula</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    
-    <style>
-      /* Import Inter font */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Chandra Prakash Bathula - AI/ML Engineer, Adjunct Faculty, and Software Engineer building production-ready machine learning and full-stack systems."
+  />
+  <meta
+    name="keywords"
+    content="Chandra Prakash Bathula, AI Engineer, Machine Learning, RAG, LangChain, FastAPI, React, Saint Louis University"
+  />
+  <title>Chandra Prakash Bathula | AI/ML Engineer</title>
 
-<style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap"
+    rel="stylesheet"
+  />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bg: #f6f1e8;
+      --ink: #1f2a2e;
+      --muted: #4f5d62;
+      --paper: #fffdfa;
+      --brand: #006d77;
+      --brand-strong: #00535a;
+      --accent: #d95d39;
+      --line: #d6cfc3;
+      --glow: rgba(0, 109, 119, 0.16);
+      --radius: 16px;
+      --shadow-soft: 0 16px 42px rgba(31, 42, 46, 0.1);
+      --shadow-hard: 0 8px 20px rgba(31, 42, 46, 0.12);
+    }
+
     * {
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
-      font-family: 'Inter', 'Roboto', sans-serif;
-      background: #f9fafb;
-      color: #222;
+      color: var(--ink);
+      font-family: "Space Grotesk", "Segoe UI", sans-serif;
       line-height: 1.6;
-      font-size: 16px;
-      overflow-x: hidden;
+      background:
+        radial-gradient(circle at 10% 10%, #ffe2bf 0%, transparent 36%),
+        radial-gradient(circle at 88% 18%, #d6efe4 0%, transparent 34%),
+        var(--bg);
+      min-height: 100vh;
     }
 
-    a {
-      color: #1e94af;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-
-    a:hover {
-      color: #1e94af;
-    }
-
-    nav {
-      background: #fff;
-      box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
-      position: fixed;
-      width: 100%;
-      top: 0;
-      z-index: 200;
-      padding: 15px 0;
-    }
-
-    nav ul {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 30px;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-
-    nav ul li a {
-      font-weight: 600;
-      font-size: 1rem;
-      padding: 5px 10px;
-      border-radius: 8px;
-    }
-
-    nav ul li a:hover,
-    nav ul li a:focus {
-      background: #1e94af;
-      color: white;
-    }
-
-    .container {
-      display: flex;
-      flex-direction: row;
-      width: 100%;
-      padding-top: 80px;
+    .layout {
       max-width: 1200px;
       margin: 0 auto;
-      padding-left: 20px;
-      padding-right: 20px;
+      padding: 32px 20px 56px;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 12px;
+      z-index: 10;
+      margin-bottom: 24px;
+      backdrop-filter: blur(8px);
+    }
+
+    .topbar nav {
+      background: rgba(255, 253, 250, 0.88);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      box-shadow: var(--shadow-hard);
+      padding: 10px 18px;
+      overflow-x: auto;
+    }
+
+    .topbar ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      gap: 18px;
+      min-width: max-content;
+    }
+
+    .topbar a {
+      text-decoration: none;
+      color: var(--muted);
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color 0.25s ease;
+    }
+
+    .topbar a:hover,
+    .topbar a:focus {
+      color: var(--brand-strong);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
     }
 
     .sidebar {
       position: sticky;
-      top: 80px;
-      width: 300px;
-      background: #fff;
-      border-radius: 16px;
-      box-shadow: 0 8px 24px rgb(0 0 0 / 0.1);
-      padding: 30px 20px;
-      height: fit-content;
-      margin-right: 40px;
-      text-align: center;
+      top: 96px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-soft);
+      padding: 24px;
+      animation: rise 0.8s ease both;
     }
 
-    .profile-pic {
-      width: 160px;
-      height: 160px;
+    .photo {
+      width: 132px;
+      height: 132px;
+      border-radius: 26px;
       object-fit: cover;
-      border-radius: 50%;
-      margin-bottom: 20px;
-      box-shadow: 0 8px 20px rgb(0 0 0 / 0.15);
-      transition: transform 0.3s ease;
+      border: 3px solid #fff;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+      display: block;
+      margin-bottom: 18px;
     }
 
-    .profile-pic:hover {
-      transform: scale(1.05);
+    .name {
+      margin: 0;
+      font-size: 1.5rem;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
     }
 
-    .sidebar h1 {
-      margin: 0 0 10px;
+    .role {
+      margin: 8px 0 18px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .chip-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 18px;
+    }
+
+    .chip {
+      padding: 5px 11px;
+      border-radius: 999px;
+      background: #e6f3ef;
+      color: var(--brand-strong);
+      font-size: 0.78rem;
       font-weight: 700;
-      font-size: 1.8rem;
-      color: #111827;
+      letter-spacing: 0.02em;
     }
 
-    .sidebar p {
-      color: #6b7280;
-      font-weight: 500;
-      font-size: 1rem;
+    .contact {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      gap: 10px;
+      font-size: 0.9rem;
     }
 
-    .social-icons {
-      margin-top: 25px;
+    .contact a {
+      color: var(--brand-strong);
+      text-decoration: none;
+      border-bottom: 1px dotted transparent;
+      transition: border-color 0.25s ease;
     }
 
-    .social-icons a {
-      font-size: 26px;
-      margin: 0 10px;
-      color: #6b7280;
-      transition: color 0.3s ease, transform 0.3s ease;
+    .contact a:hover,
+    .contact a:focus {
+      border-color: var(--brand-strong);
     }
 
-    .social-icons a:hover {
-      color: #1e94af;
-      transform: translateY(-4px);
+    .social {
+      margin-top: 18px;
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
     }
 
-    .content {
-      flex: 1;
+    .social a {
+      width: 34px;
+      height: 34px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      border: 1px solid var(--line);
+      color: var(--brand-strong);
       background: #fff;
-      border-radius: 16px;
-      padding: 40px 50px;
-      box-shadow: 0 8px 24px rgb(0 0 0 / 0.08);
+      text-decoration: none;
+      transition: transform 0.2s ease, border-color 0.2s ease;
     }
 
-    h1, h2, h3 {
-      color: #111827;
-      font-weight: 700;
-      margin-top: 0;
+    .social a:hover,
+    .social a:focus {
+      transform: translateY(-2px);
+      border-color: var(--brand);
+    }
+
+    .main {
+      display: grid;
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-soft);
+      padding: 24px;
+      animation: rise 0.7s ease both;
+    }
+
+    .card:nth-child(2) {
+      animation-delay: 0.05s;
+    }
+
+    .card:nth-child(3) {
+      animation-delay: 0.1s;
+    }
+
+    .card:nth-child(4) {
+      animation-delay: 0.15s;
+    }
+
+    .card:nth-child(5) {
+      animation-delay: 0.2s;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      margin: 0;
+      color: var(--ink);
+      line-height: 1.25;
     }
 
     h2 {
-      border-bottom: 3px solid #1e94af;
-      padding-bottom: 8px;
-      margin-bottom: 25px;
+      font-size: 1.35rem;
+      margin-bottom: 14px;
+      font-family: "Source Serif 4", Georgia, serif;
+      letter-spacing: 0.01em;
     }
 
-    h3 {
-      margin-bottom: 12px;
-      color: #1e94af;
+    p {
+      margin: 0;
+      color: var(--muted);
     }
 
-    ul {
-      padding-left: 20px;
+    .hero {
+      display: grid;
+      gap: 16px;
     }
 
-    ul li {
+    .hero-title {
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-family: "Source Serif 4", Georgia, serif;
+      letter-spacing: 0.01em;
+      margin-bottom: 6px;
+    }
+
+    .hero p {
+      max-width: 74ch;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #fff0e8;
+      color: #8b3f26;
+      border: 1px solid #f2c7b7;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      padding: 6px 11px;
+      font-weight: 700;
+    }
+
+    .section-list {
+      margin: 0;
+      padding-left: 18px;
+      display: grid;
+      gap: 9px;
+      color: var(--muted);
+    }
+
+    .timeline {
+      display: grid;
+      gap: 16px;
+    }
+
+    .item {
+      padding: 16px;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fff;
+      box-shadow: 0 1px 0 rgba(31, 42, 46, 0.03);
+    }
+
+    .item h3 {
+      font-size: 1.03rem;
+      margin-bottom: 4px;
+    }
+
+    .item .meta {
+      color: var(--muted);
+      font-size: 0.9rem;
       margin-bottom: 10px;
     }
 
-    section {
-      margin-bottom: 60px;
+    .skills {
+      display: grid;
+      gap: 12px;
     }
 
-    /* === Responsive === */
-    @media (max-width: 900px) {
-      .container {
-        flex-direction: column;
+    .skills p strong {
+      color: var(--ink);
+    }
+
+    .pill-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .pill {
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--ink);
+      border-radius: 999px;
+      padding: 4px 10px;
+      font-size: 0.82rem;
+    }
+
+    .footer-note {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.86rem;
+      margin-top: 18px;
+    }
+
+    @keyframes rise {
+      from {
+        opacity: 0;
+        transform: translateY(14px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 980px) {
+      .grid {
+        grid-template-columns: 1fr;
       }
 
       .sidebar {
-        width: 100%;
-        margin-right: 0;
-        margin-bottom: 40px;
-        padding: 40px 20px;
-      }
-
-      .profile-pic {
-        width: 180px;
-        height: 180px;
-      }
-
-      .content {
-        padding: 30px 20px;
+        position: static;
       }
     }
 
-    @media (max-width: 600px) {
-      nav ul {
-        flex-direction: column;
-        gap: 10px;
+    @media (max-width: 640px) {
+      .layout {
+        padding: 16px 12px 30px;
       }
 
+      .topbar {
+        top: 8px;
+      }
+
+      .topbar nav {
+        padding: 8px 12px;
+      }
+
+      .card,
       .sidebar {
-        padding: 30px 10px;
+        padding: 18px;
       }
 
-      .profile-pic {
-        width: 160px;
-        height: 160px;
+      .hero-title {
+        font-size: 1.7rem;
       }
 
-      .content {
-        padding: 20px 10px;
-      }
-
-      nav ul li a {
-        font-size: 0.9rem;
-        padding: 4px 8px;
+      .photo {
+        width: 110px;
+        height: 110px;
       }
     }
   </style>
 </head>
-
 <body>
-    <nav>
+  <div class="layout">
+    <header class="topbar">
+      <nav aria-label="Section navigation">
         <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#experience">Professional Experiences</a></li>
-            <li><a href="#research">Research Interests</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#publications-service">Publications & Service</a></li>
+          <li><a href="#summary">Summary</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#publications">Publications</a></li>
         </ul>
-    </nav>
-    <div class="container">
-        <aside class="sidebar">
-            <img src="Profile.jpeg" alt="Chandra Prakash Bathula" class="profile-pic" />
-            <h1>Chandra Prakash Bathula</h1>
-            <p>Machine Learning Engineer | Adjunct Faculty @ SLU</p>
-            <div class="social-icons">
-                <a href="mailto:chandraprakash.bathula@slu.edu" title="Email"><i class="fas fa-envelope"></i></a>
-                <a href="https://portfolio-chandra-prakash-bathulas-projects.vercel.app/" title="CV"><i
-                        class="fas fa-file-alt"></i></a>
-                <a href="https://github.com/ChandraPrakash-Bathula" title="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/chandra-prakash-bathula/" title="LinkedIn"><i
-                        class="fab fa-linkedin"></i></a>
-                <a href="https://medium.com/@ChandraPrakash-Bathula" title="Medium"><i class="fab fa-medium"></i></a>
-                <a href="https://scholar.google.com/citations?user=PuvoWIwAAAAJ" title="Google Scholar"><i
-                        class="fas fa-graduation-cap"></i></a>
-            </div>
-        </aside>
+      </nav>
+    </header>
 
-        <main class="content">
-            <section id="about">
-                <h2>About Me</h2>
-                <p>
-                    I’m a Machine Learning Practitioner and Faculty at Saint Louis University, passionate about
-                    applying AI for real-world impact. My focus spans natural language processing, computer vision,
-                    predictive analytics, and full-stack ML systems. I’ve built scalable solutions processing thousands
-                    of data points and mentored 250+ graduate students in hands-on software solutions. Whether
-                    predicting crop yields or optimizing learning outcomes, my work is rooted in bridging theory with
-                    practical innovation.
-                </p>
-            </section>
+    <div class="grid">
+      <aside class="sidebar" aria-label="Profile">
+        <img src="Profile.jpeg" alt="Portrait of Chandra Prakash Bathula" class="photo" />
+        <h1 class="name">Chandra Prakash Bathula</h1>
+        <p class="role">AI/ML Engineer, Adjunct Faculty, and Full-Stack Developer</p>
 
-            <section id="education">
-                <h2>Education</h2>
-                <ul>
-                    <li><strong>MS Information Systems</strong>, Saint Louis University, GPA: 3.93/4.00 (Aug 2022 – May
-                        2024)
-                        <ul>
-                            <li><strong>MRP-Thesis:</strong> Developed a mobile app for farmers, enabling market access,
-                                equipment rentals, and community collaboration with real-time weather and logistics
-                                support.</li>
-                            <li>Awarded Distinction and Distinguished Graduate of Saint Louis University. </li>
-                            <li><strong>Relevant Courses:</strong> Information Retrieval, Software Engineering, Enterprise
-                                Architecture.</li>
-                        </ul>
-                    </li>
-                    <li><strong>B.Tech in Electronics & Computer Engineering</strong>, JBIET (July 2017 – June 2021)
-                        <ul>
-                            <li><strong>Capstone:</strong> “Smart Home Automation using IoT” — reduced energy usage by
-                                20% with sensor-driven systems.</li>
-                        </ul>
-                    </li>
-                </ul>
-            </section>
+        <div class="chip-row">
+          <span class="chip">RAG Systems</span>
+          <span class="chip">Computer Vision</span>
+          <span class="chip">NLP</span>
+          <span class="chip">MLOps</span>
+        </div>
 
-            <section id="experience">
-                <h2>Professional Experience</h2>
-                <ul>
-                    <li><strong>Adjunct Faculty</strong>, Saint Louis University (Aug 2024 – Present)
-                        <ul>
-                            <li>Mentor 70+ graduate students per semester in web development, design, data structures,
-                                and deployment, fostering practical skills through project-based learning.</li>
-                            <li>Designed and delivered a new course module on scalable software architectures,
-                                increasing student project completion rates by 25%.</li>
-                            <li>Introduced real-world case studies on AI applications, enhancing student understanding
-                                of theoretical concepts by 30% as per feedback surveys.</li>
-                        </ul>
-                    </li>
-                    <li><strong>ITS Researcher</strong>, Saint Louis University (Mar 2023 – Dec 2024)
-                        <ul>
-                            <li>Optimized workflows for 3D print station and Lost & Found UI, reducing ticket workload
-                                by 30% through streamlined ticketing systems.</li>
-                            <li>Developed a QR code-based asset tracking system, cutting manual labor hours by 35% and
-                                improving retrieval efficiency.</li>
-                            <li>Led a cross-functional team to automate high-priority email notifications, saving 15
-                                hours of staff time weekly and improving response times by 40%.</li>
-                        </ul>
-                    </li>
-                    <li><strong>Associate Software Engineer</strong>, Qentelli Solutions Pvt Ltd, Hyderabad, India (Mar
-                        2021 – Jul 2022)
-                        <ul>
-                            <li>Developed responsive web applications using React, Vue, Node.js, and Electron,
-                                integrating ML models to process over 10,000 data points daily.</li>
-                            <li>Designed and implemented an automated testing suite with Jest, reducing bug incidence by
-                                20% and accelerating release cycles by 15%.</li>
-                            <li>Collaborated with product teams to enhance UI/UX features, boosting user engagement
-                                metrics by 18% through A/B testing and iterative design.</li>
-                        </ul>
-                    </li>
-                </ul>
-            </section>
-            <section id="research">
-                <h2>Research Interests</h2>
-                <ul>
-                    <li><strong>Natural Language Processing (NLP):</strong> Focused on building interpretable and
-                        domain-specific NLP systems, including transformers for education, healthcare, and chat-based
-                        applications.</li>
-                    <li><strong>Interpretability & Explainability:</strong> Exploring SHAP, LIME, and counterfactual
-                        explanations to build transparent AI models, especially in sensitive domains like healthcare and
-                        finance.</li>
-                    <li><strong>Computer Vision:</strong> Applying CNNs and transformer-based architectures for
-                        real-world tasks such as object detection, scene understanding, and agricultural monitoring.
-                    </li>
-                    <li><strong>AI in Agriculture:</strong> Leveraging ML and CV techniques for crop health detection,
-                        yield prediction, and smart irrigation systems.</li>
-                    <li><strong>AI in Education:</strong> Designing adaptive learning systems, automated feedback
-                        generation, and performance analytics to enhance personalized education.</li>
-                </ul>
-            </section>
-            <section id="projects">
-                <h2>Projects</h2>
-                <div>
-                    <h3>EliteNotes App: Transcription & Summarization Tool</h3>
-                    <ul>
-                        <li>Built a full-stack app for real-time transcription and summarization.</li>
-                        <li>Integrated TensorFlow models for speech-to-text and text summarization.</li>
-                        <li>Reduced note-taking time by 40% for over 500 users.</li>
-                        <li><strong>Tech Stack:</strong> React, Flask, TensorFlow, Vercel <a
-                                href="https://elite-notes-poc.vercel.app/"><i class="fas fa-globe"></i> Demo</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>TubeFlix: Lightweight YouTube Clone</h3>
-                    <ul>
-                        <li>Created a video streaming app with optimized playback performance.</li>
-                        <li>Used React for the frontend and Firebase for backend and hosting.</li>
-                        <li>Designed a lightweight alternative to YouTube’s core features.</li>
-                        <li><strong>Tech Stack:</strong> React, Firebase <a href="https://utubeflix-79845.web.app/"><i
-                                    class="fas fa-globe"></i> Demo</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>3D Visualization of Word2Vec Embeddings</h3>
-                    <ul>
-                        <li>Built an interactive 3D tool to visualize Word2Vec embeddings.</li>
-                        <li>Applied PCA and Plotly for dimensionality reduction and rendering.</li>
-                        <li>Enabled semantic exploration with color-coded similarity markers.</li>
-                        <li><strong>Tech Stack:</strong> Python, Gensim, Scikit-learn, Plotly, NumPy <a
-                                href="https://github.com/ChandraPrakash-Bathula/PCA-in-3D.git"><i
-                                    class="fab fa-github"></i> GitHub</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>VIZ FLIX GPT: AI-Powered Movie Browsing & Recommendation Platform</h3>
-                    <ul>
-                        <li>Developed an AI-driven movie app with personalized recommendations.</li>
-                        <li>Implemented secure authentication and dynamic trailer browsing.</li>
-                        <li>Integrated GPT for multi-lingual search functionality.</li>
-                        <li><strong>Tech Stack:</strong> React, Firebase, Redux, Tailwind CSS, TMDB API, OpenAI API <a
-                                href="https://viz-flix-gpt.vercel.app/"><i class="fas fa-globe"></i> Demo</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Apparel Recommendation System: Content-Based Filtering & CNN</h3>
-                    <ul>
-                        <li>Created a recommendation engine for personalized apparel suggestions.</li>
-                        <li>Processed 180,000+ images using content-based filtering and CNNs.</li>
-                        <li>Combined TF-IDF, Word2Vec, and VGG-16 for optimal performance.</li>
-                        <li><strong>Tech Stack:</strong> Python, Keras, NLTK, Amazon API, CNN (VGG-16) <a
-                                href="https://github.com/ChandraPrakash-Bathula/Apparel-Recommendations"><i
-                                    class="fab fa-github"></i> GitHub</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Tableau Dashboards</h3>
-                    <ul>
-                        <li>Designed dashboards for public data insights.</li>
-                        <li>Visualized complex datasets with interactive elements.</li>
-                        <li>Shared publicly for community use and feedback.</li>
-                        <li><strong>Tech Stack:</strong> Tableau <a
-                                href="https://public.tableau.com/app/profile/chandra.prakash.bathula/vizzes"><i
-                                    class="fas fa-chart-bar"></i> View Dashboards</a></li>
-                    </ul>
-                </div>
-            </section>
-            <section id="publications-service">
-                <h2>Publications & Service</h2>
+        <ul class="contact">
+          <li><strong>Email:</strong> <a href="mailto:chandraprakash.bathula@slu.edu">chandraprakash.bathula@slu.edu</a></li>
+          <li><strong>Phone:</strong> +1 (314) 723-0206</li>
+          <li><strong>Location:</strong> St. Louis, MO</li>
+          <li><strong>Profiles:</strong> <a href="https://www.linkedin.com/in/chandra-prakash-bathula/">LinkedIn</a> | <a href="https://portfolio-chandra-prakash-bathulas-projects.vercel.app/">Personal Website</a> | <a href="https://huggingface.co/">HuggingFace</a></li>
+          <li><strong>Resume:</strong> <a href="Chandra_Prakash_Bathula__.pdf" target="_blank" rel="noopener noreferrer">Download PDF</a></li>
+        </ul>
 
-                <div class="paper">
-                    <h3>Published Paper</h3>
-                    <p><strong>Title:</strong> Developing a Enterprise Application Tool to Discover Midwest Job Trends
-                    </p>
-                    <p><strong>Authors:</strong> Chandra Bathula (Saint Louis University), Maria Weber (Saint Louis
-                        University)</p>
-                    <p><strong>Presented at:</strong> CCSC - Central Plains 2025, Drake University, Iowa</p>
-                    <p class="abstract-short">Significant growth in Computer and Mathematical Occupations is
-                        projected...</p>
-                    <p class="abstract-full" style="display: none;">Significant growth in Computer and Mathematical
-                        Occupations is projected
-                        over the next decade, outpacing other fields with higher median pay and demand for specialized
-                        skills. According to the Bureau of Labor Statistics (BLS), from 2023 to 2033, the U.S.
-                        anticipates an 11% growth in Computer Occupations and 7% in Mathematical Occupations, generating
-                        over 393,000 jobs annually [5][6][3]. This study analyzes national trends in these fields,
-                        focusing on wages, growth rates, and regional dynamics in the Central Plains (Iowa, Kansas,
-                        Missouri, Nebraska). Nationally, median salaries range from $101,000 to $104,000, with regional
-                        variations reflecting local economic factors [5][3]. Missouri leads regional growth, driven by
-                        demand for Data Scientists and Software Developers, while Kansas excels in Actuaries, and Iowa
-                        and Nebraska show steady increases in Information Security Analysts. This research highlights
-                        the importance of targeted skill development to meet evolving technological needs, using
-                        descriptive statistics and visualizations to inform educators, students, and policymakers.</p>
-                    <button class="toggle-abstract" aria-expanded="false">Read more</button>
-                </div>
-                <!-- <div>
-                    <h3>Published Paper</h3>
-                    <p><strong>Title:</strong> Developing a Enterprise Application Tool to Discover Midwest Job Trends
-                    </p>
-                    <p><strong>Authors:</strong> Chandra Bathula (Saint Louis University), Maria Weber (Saint Louis
-                        University)</p>
-                    <p><strong>Presented at:</strong> CCSC - Central Plains 2025, Drake University, Iowa</p>
-                    <p class="abstract-short">Significant growth in Computer and Mathematical Occupations is projected
-                        over the next decade, outpacing other fields with higher median pay and demand for specialized
-                        skills.</p>
-                    <p class="abstract-full">Significant growth in Computer and Mathematical Occupations is projected
-                        over the next decade, outpacing other fields with higher median pay and demand for specialized
-                        skills. According to the Bureau of Labor Statistics (BLS), from 2023 to 2033, the U.S.
-                        anticipates an 11% growth in Computer Occupations and 7% in Mathematical Occupations, generating
-                        over 393,000 jobs annually [5][6][3]. This study analyzes national trends in these fields,
-                        focusing on wages, growth rates, and regional dynamics in the Central Plains (Iowa, Kansas,
-                        Missouri, Nebraska). Nationally, median salaries range from $101,000 to $104,000, with regional
-                        variations reflecting local economic factors [5][3]. Missouri leads regional growth, driven by
-                        demand for Data Scientists and Software Developers, while Kansas excels in Actuaries, and Iowa
-                        and Nebraska show steady increases in Information Security Analysts. This research highlights
-                        the importance of targeted skill development to meet evolving technological needs, using
-                        descriptive statistics and visualizations to inform educators, students, and policymakers.</p>
-                    <button class="toggle-abstract" aria-expanded="false">Read more</button>
-                </div> -->
-                <div>
-                    <h3>Professional Service</h3>
-                    <!-- Replace [Date] with the actual date of the conference -->
-                    <p><strong>Event:</strong> CCSC Central Plains Conference, Drake University, Iowa</p>
-                    <p><strong>Judge:</strong> CCSC poster presentations for undergraduate students.</p>
-                </div>
-            </section>
-        </main>
+        <div class="social" aria-label="Social links">
+          <a href="https://github.com/ChandraPrakash-Bathula" aria-label="GitHub" title="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/chandra-prakash-bathula/" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://portfolio-chandra-prakash-bathulas-projects.vercel.app/" aria-label="Portfolio" title="Portfolio"><i class="fas fa-globe"></i></a>
+          <a href="https://huggingface.co/" aria-label="HuggingFace" title="HuggingFace"><i class="fas fa-robot"></i></a>
+          <a href="https://scholar.google.com/citations?user=PuvoWIwAAAAJ" aria-label="Google Scholar" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+        </div>
+      </aside>
+
+      <main class="main">
+        <section class="card hero" id="summary" aria-label="Professional summary">
+          <span class="badge">Available for AI/ML engineering and research opportunities</span>
+          <h2 class="hero-title">Building practical, scalable AI systems from research to deployment.</h2>
+          <p>
+            AI/ML engineer and educator with hands-on experience across deep learning, transformers, BERT,
+            RAG, and agentic workflows. I build end-to-end systems from data and modeling to cloud deployment,
+            while mentoring graduate learners through practical, project-driven development.
+          </p>
+        </section>
+
+        <section class="card" id="experience" aria-label="Experience">
+          <h2>Experience</h2>
+          <div class="timeline">
+            <article class="item">
+              <h3>Adjunct Faculty & AI Developer, Saint Louis University</h3>
+              <p class="meta">Aug 2024 - Present | St. Louis, MO</p>
+              <ul class="section-list">
+                <li>Developed complete course materials, syllabi, notebooks, derivations, Colab labs, and assessments for IS 5200, IS 5500, IS 5600, and AA 5750.</li>
+                <li>Taught 60+ students per semester through live coding and interactive activities, improving competency scores by 20% and project success by 35%.</li>
+                <li>Designed RAG plus multi-agent workflow modules with Supabase vector stores and HuggingFace plus OpenAI pipelines, raising completion rates from 60% to 95% across three cohorts.</li>
+                <li>Mentored 300+ students across 20+ capstone projects on full ML lifecycle practices, reducing dataset-induced errors by 25%.</li>
+              </ul>
+            </article>
+
+            <article class="item">
+              <h3>Technical Intern, AI & Workflow Automation, Saint Louis University</h3>
+              <p class="meta">Mar 2023 - Dec 2023 | St. Louis, MO</p>
+              <ul class="section-list">
+                <li>Designed workflow interfaces and dashboards in Figma, then built a Python-based priority routing engine that cut manual triage by 40% and improved SLA compliance by 30%.</li>
+                <li>Developed a CNN and ResNet solution for Lost-and-Found automation after interface prototyping in Figma, reducing sorting time by 35% and improving matching accuracy by 28%.</li>
+              </ul>
+            </article>
+
+            <article class="item">
+              <h3>Associate Software Engineer, Qentelli Solutions Pvt Ltd</h3>
+              <p class="meta">Mar 2021 - Jul 2022 | Hyderabad, India</p>
+              <ul class="section-list">
+                <li>Built front-end features for three enterprise web applications serving 5K+ users using TypeScript, React.js, Vue.js, and Redux; translated Figma prototypes into responsive, pixel-perfect components.</li>
+                <li>Configured Webpack and Parcel for optimized builds; enforced strict TypeScript and ESLint rules and improved release efficiency by 25% via Jest unit and integration testing.</li>
+                <li>Integrated LSTM/GRU, random forest, gradient boosting, and CNN/ResNet models into QA pipelines, reducing defect false positives by about 18% and improving anomaly precision by about 22%.</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="card" id="projects" aria-label="Projects">
+          <h2>Selected Projects</h2>
+          <div class="timeline">
+            <article class="item">
+              <h3>Agentic RAG Automation</h3>
+              <p class="meta">Gmail, Google Drive, WhatsApp, OpenAI, LangChain, pgvector</p>
+              <p>Production multi-agent workflow using Gmail and Google Drive as private RAG knowledge sources, with automated context-aware email drafting and WhatsApp alerts for unresolved queries.</p>
+            </article>
+
+            <article class="item">
+              <h3>Research Retrieval Agent</h3>
+              <p class="meta">ArXiv, DuckDuckGo, OpenAI Function Calling</p>
+              <p>Autonomous multi-agent system that retrieves five or more research papers, extracts metadata, summarizes findings, and generates structured insights.</p>
+            </article>
+
+            <article class="item">
+              <h3>Food-101 Image Classifier</h3>
+              <p class="meta">ResNet-50, PyTorch, HuggingFace Hub, Gradio, torchvision</p>
+              <p>Fine-tuned ImageNet-pretrained ResNet-50 on 101K Food-101 images across 101 classes for 100 epochs, surpassing 80% accuracy and deploying a real-time Gradio demo on HuggingFace Spaces.</p>
+            </article>
+
+            <article class="item">
+              <h3>Apparel Recommendation Engine</h3>
+              <p class="meta">Keras, Word2Vec, TF-IDF, VGG-CNN, GPU</p>
+              <p>Content-based recommender over 180K+ Amazon apparel images benchmarking seven retrieval strategies, including TF-IDF, Word2Vec, and VGG-CNN visual features with GPU-accelerated K-Means segmentation.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="card" id="skills" aria-label="Technical skills">
+          <h2>Technical Skills</h2>
+          <div class="skills">
+            <p><strong>Languages:</strong> JavaScript (ES6+), TypeScript, Python, SQL, R</p>
+            <p><strong>Front-End:</strong> React.js, Vue.js, Next.js, Node.js, Redux, Webpack, Parcel, Quasar, Vuetify, Bootstrap, Electron.js</p>
+            <p><strong>ML/AI:</strong> PyTorch, Keras, scikit-learn, XGBoost, CNNs, ResNets, LSTMs, GRUs, Transformers, BERT, Gemma-7B, Word2Vec</p>
+            <p><strong>Generative AI:</strong> HuggingFace, OpenAI API, LangChain, RAG, Agentic RAG, Supabase pgvector, Pinecone, Prompt Engineering</p>
+            <p><strong>Testing/UI:</strong> Jest, Cypress, DevTools, Unit/Integration/E2E Testing, Figma, Responsive Design, WCAG/ARIA</p>
+            <p><strong>Infrastructure:</strong> AWS (S3, EC2, Lambda, RDS), Docker, FastAPI, Firebase, PostgreSQL, CI/CD, Vercel, Git, Agile/Scrum</p>
+          </div>
+          <div class="pill-group" aria-hidden="true">
+            <span class="pill">TypeScript</span>
+            <span class="pill">FastAPI</span>
+            <span class="pill">LangChain</span>
+            <span class="pill">OpenAI API</span>
+            <span class="pill">Supabase pgvector</span>
+            <span class="pill">PyTorch</span>
+            <span class="pill">React.js</span>
+            <span class="pill">Docker</span>
+            <span class="pill">Pinecone</span>
+          </div>
+        </section>
+
+        <section class="card" id="education" aria-label="Education">
+          <h2>Education</h2>
+          <div class="timeline">
+            <article class="item">
+              <h3>Saint Louis University, School for Professional Studies</h3>
+              <p class="meta">M.S. in Information Systems | GPA: 3.93/4.00 | May 2024 | St. Louis, MO</p>
+              <p>Awarded Distinction for Research Excellence and Distinguished Graduate recognition.</p>
+            </article>
+
+            <article class="item">
+              <h3>JB Institute of Engineering and Technology</h3>
+              <p class="meta">B.Tech, Electronics and Computer Engineering | Jun 2021 | Hyderabad, India</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="card" id="publications" aria-label="Publications and achievements">
+          <h2>Publications & Achievements</h2>
+          <ul class="section-list">
+            <li>First Author (ACM, 2025): Developing an Enterprise Application Tool to Discover Midwest Job Trends, Journal of Computing Sciences in Colleges, 40(6), pp. 75-89, CCSC Central Plains at Drake University. doi:10.5555/3729857.3729866</li>
+            <li>Awarded Distinction and Distinguished Graduate honors for MRP Thesis and overall academic performance at Saint Louis University (2024).</li>
+          </ul>
+        </section>
+      </main>
     </div>
-    <script>
-        document.querySelectorAll('.toggle-abstract').forEach(button => {
-            button.addEventListener('click', function () {
-                const paper = this.closest('.paper');
-                const short = paper.querySelector('.abstract-short');
-                const full = paper.querySelector('.abstract-full');
-                if (full.style.display === 'none' || full.style.display === '') {
-                    short.style.display = 'none';
-                    full.style.display = 'block';
-                    this.textContent = 'Read less';
-                    this.setAttribute('aria-expanded', 'true');
-                } else {
-                    short.style.display = 'block';
-                    full.style.display = 'none';
-                    this.textContent = 'Read more';
-                    this.setAttribute('aria-expanded', 'false');
-                }
-            });
-        });
-    </script>
+
+    <p class="footer-note">Last updated April 2026</p>
+  </div>
 </body>
 </html>
