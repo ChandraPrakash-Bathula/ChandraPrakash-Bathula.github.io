@@ -382,30 +382,10 @@
       transform: translateY(-1px);
     }
 
-    .hf-grid {
-      margin-top: 14px;
-      display: grid;
-      gap: 10px;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    }
-
-    .hf-card {
-      border: 1px solid var(--line);
-      background: #fff;
-      border-radius: 12px;
-      padding: 12px;
-      display: grid;
-      gap: 7px;
-    }
-
-    .hf-card h4 {
-      font-size: 0.95rem;
-      margin: 0;
-    }
-
-    .hf-card p {
-      font-size: 0.86rem;
-      margin: 0;
+    .project-links {
+      margin-top: 16px;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
     }
 
     .footer-note {
@@ -537,7 +517,7 @@
 
       <main class="main" id="main-content">
         <section class="card hero" id="summary" aria-label="Professional summary">
-          <span class="badge">Available for AI/ML engineering and research opportunities</span>
+         <span class="badge">Seeking AI PhD opportunities in Computer Vision and NLP, along with research assistantships | Open to AI/ML research and engineering roles</span>
           <h2 class="hero-title">Building practical, scalable AI systems from research to deployment.</h2>
           <p>
             AI/ML engineer and educator with hands-on experience across deep learning, transformers, BERT,
@@ -598,56 +578,34 @@
               <h3>Agentic RAG Automation</h3>
               <p class="meta">Gmail, Google Drive, WhatsApp, OpenAI, LangChain, pgvector</p>
               <p>Production multi-agent workflow using Gmail and Google Drive as private RAG knowledge sources, with automated context-aware email drafting and WhatsApp alerts for unresolved queries.</p>
-              <div class="actions">
-                <a class="button-link" href="https://huggingface.co/ChandraPrakashBathula/Image_Captioning" target="_blank" rel="noopener noreferrer">Open Image_Captioning Model</a>
-              </div>
             </article>
 
             <article class="item">
               <h3>Research Retrieval Agent</h3>
               <p class="meta">ArXiv, DuckDuckGo, OpenAI Function Calling</p>
               <p>Autonomous multi-agent system that retrieves five or more research papers, extracts metadata, summarizes findings, and generates structured insights.</p>
-              <div class="actions">
-                <a class="button-link" href="https://huggingface.co/spaces/ChandraPrakashBathula/mlp-mnist-draw" target="_blank" rel="noopener noreferrer">Explore Demo Space</a>
-              </div>
             </article>
 
             <article class="item">
               <h3>Food-101 Image Classifier</h3>
               <p class="meta">ResNet-50, PyTorch, HuggingFace Hub, Gradio, torchvision</p>
               <p>Fine-tuned ImageNet-pretrained ResNet-50 on 101K Food-101 images across 101 classes for 100 epochs, surpassing 80% accuracy and deploying a real-time Gradio demo on HuggingFace Spaces.</p>
-              <div class="actions">
-                <a class="button-link" href="https://huggingface.co/spaces/ChandraPrakashBathula/food101_resnet" target="_blank" rel="noopener noreferrer">Open food101_resnet Space</a>
-                <a class="button-link" href="https://huggingface.co/ChandraPrakashBathula/Food_101_Classification_ResNet50" target="_blank" rel="noopener noreferrer">Open Food_101 Model</a>
-              </div>
             </article>
 
             <article class="item">
               <h3>Apparel Recommendation Engine</h3>
               <p class="meta">Keras, Word2Vec, TF-IDF, VGG-CNN, GPU</p>
               <p>Content-based recommender over 180K+ Amazon apparel images benchmarking seven retrieval strategies, including TF-IDF, Word2Vec, and VGG-CNN visual features with GPU-accelerated K-Means segmentation.</p>
-              <div class="actions">
-                <a class="button-link" href="https://huggingface.co/spaces/ChandraPrakashBathula/SVM_AmazonReviews_Classification" target="_blank" rel="noopener noreferrer">Open SVM_AmazonReviews Space</a>
-              </div>
             </article>
           </div>
 
-          <div class="hf-grid" aria-label="HuggingFace highlights">
-            <article class="hf-card">
-              <h4>Model Hub</h4>
-              <p>Explore published models and checkpoints.</p>
-              <a class="button-link" href="https://huggingface.co/ChandraPrakashBathula/CIFAR10-CNN_Model" target="_blank" rel="noopener noreferrer">Open CIFAR10-CNN_Model</a>
-            </article>
-            <article class="hf-card">
-              <h4>Spaces</h4>
-              <p>Try interactive demos and inference apps.</p>
-              <a class="button-link" href="https://huggingface.co/spaces/ChandraPrakashBathula/cifar10-cnn-demo" target="_blank" rel="noopener noreferrer">Open cifar10-cnn-demo</a>
-            </article>
-            <article class="hf-card">
-              <h4>Featured Model</h4>
-              <p>See an additional deployed prediction model.</p>
-              <a class="button-link" href="https://huggingface.co/ChandraPrakashBathula/nyc-taxi-predictor" target="_blank" rel="noopener noreferrer">Open nyc-taxi-predictor</a>
-            </article>
+          <div class="project-links" aria-label="HuggingFace external links">
+            <div class="actions">
+              <a class="button-link" href="https://huggingface.co/ChandraPrakashBathula" target="_blank" rel="noopener noreferrer">HuggingFace Profile</a>
+              <a class="button-link" href="https://huggingface.co/ChandraPrakashBathula/models" target="_blank" rel="noopener noreferrer">All Models</a>
+              <a class="button-link" href="https://huggingface.co/spaces/ChandraPrakashBathula" target="_blank" rel="noopener noreferrer">All Spaces</a>
+              <a class="button-link" href="https://huggingface.co/ChandraPrakashBathula/datasets" target="_blank" rel="noopener noreferrer">Datasets</a>
+            </div>
           </div>
         </section>
 
