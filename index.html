@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -703,6 +703,1751 @@
         "https://scholar.google.com/citations?user=PuvoWIwAAAAJ"
       ]
     }
+  </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Chandra Prakash Bathula's research portfolio in computer vision, deep learning, visual representation learning, and AI systems."
+  />
+  <meta name="author" content="Chandra Prakash Bathula" />
+  <meta name="theme-color" content="#101411" />
+
+  <title>Chandra Prakash Bathula | Computer Vision & AI Research</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    :root {
+      --bg: #101411;
+      --surface: #171d19;
+      --surface-raised: #1c241e;
+      --text: #e9eee8;
+      --muted: #a0ada2;
+      --subtle: #748176;
+      --line: #303a32;
+      --accent: #b6e3a3;
+      --accent-dark: #20351f;
+      --warm: #e6d4ad;
+      --max-width: 1080px;
+      --radius: 12px;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: "DM Sans", sans-serif;
+      font-size: 15px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    a:hover {
+      color: #d5f2c8;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    button:focus-visible,
+    a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 4px;
+    }
+
+    .container {
+      width: min(var(--max-width), calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    .mono,
+    .eyebrow,
+    .section-number,
+    .date,
+    .tag {
+      font-family: "DM Mono", monospace;
+    }
+
+    .mono {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(16, 20, 17, 0.92);
+      border-bottom: 1px solid rgba(75, 91, 76, 0.45);
+      backdrop-filter: blur(16px);
+    }
+
+    .nav {
+      min-height: 66px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      color: var(--text);
+      font-family: "Manrope", sans-serif;
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      white-space: nowrap;
+    }
+
+    .brand span {
+      color: var(--accent);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .menu-toggle {
+      display: none;
+      color: var(--text);
+      background: transparent;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 7px 10px;
+      font: inherit;
+      cursor: pointer;
+    }
+
+    main {
+      overflow: hidden;
+    }
+
+    .hero {
+      padding: 100px 0 80px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 270px;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 25px;
+      color: var(--accent);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 23px;
+      height: 1px;
+      background: var(--accent);
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Manrope", sans-serif;
+    }
+
+    h1 {
+      max-width: 720px;
+      margin-bottom: 20px;
+      font-size: clamp(38px, 5.8vw, 66px);
+      font-weight: 700;
+      letter-spacing: -0.065em;
+      line-height: 1.1;
+    }
+
+    h1 .highlight {
+      color: var(--accent);
+    }
+
+    .hero-description {
+      max-width: 690px;
+      margin-bottom: 26px;
+      color: #c0c9c0;
+      font-size: 16px;
+      line-height: 1.9;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px 18px;
+      margin-bottom: 28px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .hero-meta span {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .hero-meta span::before {
+      content: "";
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 10px 16px;
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      color: var(--text);
+      font-size: 12px;
+      font-weight: 700;
+      transition: background 0.2s ease, border-color 0.2s ease;
+    }
+
+    .button.primary {
+      color: #142012;
+      background: var(--accent);
+      border-color: var(--accent);
+    }
+
+    .button.primary:hover {
+      background: #d0efc3;
+      border-color: #d0efc3;
+      color: #142012;
+    }
+
+    .button:hover {
+      border-color: var(--accent);
+      background: var(--surface-raised);
+    }
+
+    .button.primary:hover {
+      background: #d0efc3;
+    }
+
+    .portrait-wrap {
+      position: relative;
+      width: 100%;
+      max-width: 270px;
+      justify-self: end;
+    }
+
+    .portrait-frame {
+      position: relative;
+      aspect-ratio: 4 / 5;
+      overflow: hidden;
+      border: 1px solid #3c4b3d;
+      border-radius: 10px;
+      background: var(--surface);
+    }
+
+    .portrait-frame img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .portrait-caption {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 12px;
+      color: var(--muted);
+      font-family: "DM Mono", monospace;
+      font-size: 10px;
+    }
+
+    .portrait-caption span:first-child {
+      color: var(--accent);
+    }
+
+    .section {
+      padding: 76px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .section-heading {
+      display: grid;
+      grid-template-columns: 58px minmax(0, 1fr);
+      gap: 15px;
+      align-items: start;
+      margin-bottom: 34px;
+    }
+
+    .section-number {
+      padding-top: 8px;
+      color: var(--subtle);
+      font-size: 11px;
+    }
+
+    .section-heading h2 {
+      margin-bottom: 7px;
+      font-size: clamp(26px, 3.5vw, 36px);
+      letter-spacing: -0.045em;
+      line-height: 1.2;
+    }
+
+    .section-heading p {
+      max-width: 670px;
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 48px;
+    }
+
+    .about-copy p {
+      color: #c0c9c0;
+      font-size: 14px;
+    }
+
+    .about-copy strong {
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .focus-panel {
+      padding: 23px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+    }
+
+    .panel-label {
+      margin-bottom: 17px;
+      color: var(--subtle);
+      font-family: "DM Mono", monospace;
+      font-size: 10px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .focus-list {
+      display: grid;
+      gap: 15px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .focus-list li {
+      display: flex;
+      gap: 11px;
+      color: #d2d9d1;
+      font-size: 12px;
+    }
+
+    .focus-list li::before {
+      content: "↗";
+      color: var(--accent);
+      font-family: "DM Mono", monospace;
+    }
+
+    .research-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .research-card {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      transition: border-color 0.2s ease, transform 0.2s ease;
+    }
+
+    .research-card:hover {
+      transform: translateY(-2px);
+      border-color: #536b50;
+    }
+
+    .card-index {
+      margin-bottom: 17px;
+      color: var(--accent);
+      font-family: "DM Mono", monospace;
+      font-size: 11px;
+    }
+
+    .research-card h3 {
+      margin-bottom: 9px;
+      font-size: 17px;
+      letter-spacing: -0.025em;
+    }
+
+    .research-card p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.85;
+    }
+
+    .publication-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .publication {
+      padding: 25px 27px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+    }
+
+    .publication-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 11px;
+    }
+
+    .publication-type {
+      color: var(--accent);
+      font-family: "DM Mono", monospace;
+      font-size: 10px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .publication-status {
+      flex-shrink: 0;
+      padding: 4px 8px;
+      border: 1px solid #42533f;
+      border-radius: 4px;
+      color: var(--accent);
+      font-family: "DM Mono", monospace;
+      font-size: 10px;
+    }
+
+    .publication h3 {
+      margin-bottom: 8px;
+      font-size: 17px;
+      line-height: 1.5;
+      letter-spacing: -0.025em;
+    }
+
+    .publication h3 a {
+      color: var(--text);
+    }
+
+    .publication h3 a:hover {
+      color: var(--accent);
+    }
+
+    .publication-meta {
+      margin-bottom: 12px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .publication p {
+      margin-bottom: 0;
+      color: #aeb9af;
+      font-size: 13px;
+    }
+
+    .publication-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 15px;
+      font-family: "DM Mono", monospace;
+      font-size: 11px;
+    }
+
+    .publication-note {
+      margin-top: 18px;
+      color: var(--subtle);
+      font-size: 11px;
+    }
+
+    .project-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .project {
+      display: grid;
+      grid-template-columns: 58px minmax(0, 1fr);
+      gap: 18px;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+    }
+
+    .project-number {
+      color: var(--accent);
+      font-family: "DM Mono", monospace;
+      font-size: 11px;
+    }
+
+    .project h3 {
+      margin-bottom: 8px;
+      font-size: 17px;
+      letter-spacing: -0.025em;
+    }
+
+    .project p {
+      margin-bottom: 12px;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 12px;
+    }
+
+    .tag {
+      padding: 4px 7px;
+      border: 1px solid #354238;
+      border-radius: 4px;
+      color: #b6c3b6;
+      font-size: 10px;
+    }
+
+    .project-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 14px;
+      font-family: "DM Mono", monospace;
+      font-size: 11px;
+    }
+
+    .experience-list {
+      display: grid;
+      gap: 0;
+    }
+
+    .experience {
+      display: grid;
+      grid-template-columns: 190px minmax(0, 1fr);
+      gap: 32px;
+      padding: 27px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .experience:last-child {
+      border-bottom: 1px solid var(--line);
+    }
+
+    .date {
+      margin-bottom: 7px;
+      color: var(--accent);
+      font-size: 11px;
+    }
+
+    .experience-location {
+      color: var(--subtle);
+      font-size: 11px;
+    }
+
+    .experience h3 {
+      margin-bottom: 4px;
+      font-size: 17px;
+    }
+
+    .experience h4 {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    .experience ul {
+      margin: 0;
+      padding-left: 18px;
+      color: #b7c1b8;
+      font-size: 13px;
+    }
+
+    .experience li {
+      margin-bottom: 7px;
+      padding-left: 3px;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .skill-group {
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+    }
+
+    .skill-group h3 {
+      margin-bottom: 12px;
+      color: var(--accent);
+      font-size: 13px;
+    }
+
+    .skill-group p {
+      margin-bottom: 0;
+      color: #bdc7bd;
+      font-size: 12px;
+      line-height: 2;
+    }
+
+    .education-list {
+      display: grid;
+      gap: 14px;
+    }
+
+    .education {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 20px;
+      padding: 22px 24px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+    }
+
+    .education h3 {
+      margin-bottom: 5px;
+      font-size: 16px;
+    }
+
+    .education p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .education-year {
+      color: var(--accent);
+      font-family: "DM Mono", monospace;
+      font-size: 11px;
+      white-space: nowrap;
+    }
+
+    .awards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 22px;
+    }
+
+    .award {
+      padding: 8px 11px;
+      border: 1px solid var(--line);
+      border-radius: 5px;
+      color: #c4cec4;
+      font-size: 11px;
+    }
+
+    .contact-section {
+      padding: 78px 0;
+    }
+
+    .contact-panel {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 30px;
+      padding: 34px;
+      border: 1px solid #455541;
+      border-radius: var(--radius);
+      background:
+        radial-gradient(
+          circle at 100% 0%,
+          rgba(182, 227, 163, 0.08),
+          transparent 45%
+        ),
+        var(--surface);
+    }
+
+    .contact-panel h2 {
+      margin-bottom: 10px;
+      font-size: clamp(25px, 3vw, 34px);
+      letter-spacing: -0.04em;
+    }
+
+    .contact-panel p {
+      max-width: 540px;
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .contact-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+
+    footer {
+      padding: 23px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .footer-inner p {
+      margin-bottom: 0;
+      color: var(--subtle);
+      font-size: 11px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .footer-links a {
+      color: var(--muted);
+      font-size: 11px;
+    }
+
+    @media (max-width: 800px) {
+      .hero {
+        padding: 70px 0 58px;
+      }
+
+      .hero-grid {
+        grid-template-columns: minmax(0, 1fr) 200px;
+        gap: 32px;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .experience {
+        grid-template-columns: 145px minmax(0, 1fr);
+        gap: 22px;
+      }
+
+      .contact-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-actions {
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .container {
+        width: min(100% - 32px, var(--max-width));
+      }
+
+      .nav {
+        min-height: 60px;
+        flex-wrap: wrap;
+      }
+
+      .menu-toggle {
+        display: inline-flex;
+      }
+
+      .nav-links {
+        display: none;
+        width: 100%;
+        padding: 0 0 15px;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .hero {
+        padding: 52px 0 48px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+      }
+
+      .portrait-wrap {
+        max-width: 210px;
+        justify-self: start;
+      }
+
+      h1 {
+        font-size: clamp(38px, 11vw, 55px);
+      }
+
+      .hero-description {
+        font-size: 14px;
+      }
+
+      .section {
+        padding: 54px 0;
+      }
+
+      .section-heading {
+        grid-template-columns: 32px minmax(0, 1fr);
+        gap: 8px;
+        margin-bottom: 25px;
+      }
+
+      .research-grid,
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .publication {
+        padding: 20px;
+      }
+
+      .publication-top {
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .project {
+        grid-template-columns: 28px minmax(0, 1fr);
+        gap: 12px;
+        padding: 19px;
+      }
+
+      .experience {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .education {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .contact-panel {
+        padding: 24px;
+      }
+
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="#home">CPB<span>.</span></a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="navLinks"
+      >
+        Menu
+      </button>
+
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Computer Vision · Deep Learning · AI Systems</div>
+
+          <h1>
+            Chandra Prakash
+            <span class="highlight">Bathula.</span>
+          </h1>
+
+          <p class="hero-description">
+            I work on deep learning research and AI systems, with a primary
+            interest in computer vision, visual representation learning, and
+            understanding how architectural choices influence model behavior.
+            My work combines controlled experimentation, model development,
+            and practical implementations.
+          </p>
+
+          <div class="hero-meta">
+            <span>St. Louis, Missouri</span>
+            <span>Saint Louis University</span>
+            <span>Computer Vision Research</span>
+          </div>
+
+          <div class="hero-actions">
+            <a class="button primary" href="#publications">View Publications</a>
+            <a
+              class="button"
+              href="Chandra_Prakash_Bathula__.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Curriculum Vitae ↗
+            </a>
+            <a class="button" href="#projects">Research Projects</a>
+          </div>
+        </div>
+
+        <div class="portrait-wrap">
+          <div class="portrait-frame">
+            <img
+              src="Profile.jpeg"
+              alt="Portrait of Chandra Prakash Bathula"
+              loading="eager"
+            />
+          </div>
+          <div class="portrait-caption">
+            <span>RESEARCH / ENGINEERING</span>
+            <span>2026</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-number">01 /</div>
+          <div>
+            <h2>About</h2>
+            <p>Research interests grounded in experimentation and implementation.</p>
+          </div>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-copy">
+            <p>
+              I am an AI/ML practitioner and Adjunct Faculty member at
+              <strong>Saint Louis University</strong>. My work spans computer
+              vision, deep learning, applied machine learning, and AI-enabled
+              software systems.
+            </p>
+
+            <p>
+              My computer vision research includes controlled comparisons
+              between convolutional networks and vision transformers, as well
+              as experiments combining pretrained visual backbones with
+              convolutional and deformable feature-processing modules. I am
+              particularly interested in separating architectural effects from
+              initialization, pretraining, data scale, and experimental design.
+            </p>
+
+            <p>
+              Alongside research, I develop interactive educational tools and
+              reproducible demonstrations that make modern machine learning
+              methods easier to inspect, test, and understand. I also teach
+              software development, analytics, and AI-related topics.
+            </p>
+          </div>
+
+          <aside class="focus-panel">
+            <div class="panel-label">Current research directions</div>
+            <ul class="focus-list">
+              <li>CNNs, vision transformers, and visual representations</li>
+              <li>Controlled evaluation and reproducible deep learning</li>
+              <li>Image segmentation and convolution-attention hybrids</li>
+              <li>Efficient model design and experimental analysis</li>
+              <li>Multimodal learning and AI systems</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="research">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-number">02 /</div>
+          <div>
+            <h2>Research Interests</h2>
+            <p>
+              Questions about model architecture, representation, evaluation,
+              and reliable learning.
+            </p>
+          </div>
+        </div>
+
+        <div class="research-grid">
+          <article class="research-card">
+            <div class="card-index">R01</div>
+            <h3>Visual Architectures</h3>
+            <p>
+              Convolutional neural networks, residual networks, vision
+              transformers, hierarchical transformers, and hybrid visual
+              architectures. Studying how architectural choices affect
+              performance under controlled conditions.
+            </p>
+          </article>
+
+          <article class="research-card">
+            <div class="card-index">R02</div>
+            <h3>Segmentation and Feature Learning</h3>
+            <p>
+              Image segmentation, salient object detection, multibranch
+              networks, deformable convolutions, depthwise separable
+              convolutions, and interactions between convolutional operators
+              and pretrained visual representations.
+            </p>
+          </article>
+
+          <article class="research-card">
+            <div class="card-index">R03</div>
+            <h3>Experimental Methodology</h3>
+            <p>
+              Controlled benchmarks, data-regime comparisons, initialization
+              effects, reproducibility, statistical evaluation, and careful
+              interpretation of results across architectures and datasets.
+            </p>
+          </article>
+
+          <article class="research-card">
+            <div class="card-index">R04</div>
+            <h3>Multimodal and Generative AI</h3>
+            <p>
+              Transformer-based learning, retrieval-augmented generation,
+              agentic systems, model adaptation, and interactive tools for
+              inspecting and understanding AI behavior.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="publications">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-number">03 /</div>
+          <div>
+            <h2>Publications</h2>
+            <p>
+              Peer-reviewed work and accepted conference contributions.
+              Publication status is indicated for each entry.
+            </p>
+          </div>
+        </div>
+
+        <div class="publication-list">
+          <article class="publication">
+            <div class="publication-top">
+              <div class="publication-type">Conference Workshop · 2026</div>
+              <div class="publication-status">Accepted · Poster</div>
+            </div>
+
+            <h3>
+              Separating Architecture from Initialization: What a Controlled
+              CNN-Transformer Benchmark Can and Cannot Attribute
+            </h3>
+
+            <div class="publication-meta">
+              NeurIPS 2026 · TAE Workshop
+            </div>
+
+            <p>
+              A controlled investigation of convolutional and attention-based
+              architectures across model configurations, datasets, training
+              fractions, and random seeds. The study examines how
+              initialization and pretraining affect architectural comparisons,
+              emphasizing what controlled experiments can support and what
+              they cannot establish.
+            </p>
+
+            <div class="publication-links">
+              <a
+                href="https://neurips.cc/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                NeurIPS ↗
+              </a>
+            </div>
+          </article>
+
+          <article class="publication">
+            <div class="publication-top">
+              <div class="publication-type">Educational Resources · 2026</div>
+              <div class="publication-status">Accepted · 3 Resources</div>
+            </div>
+
+            <h3>
+              Interactive Educational Resources for Modern AI and Machine Learning
+            </h3>
+
+            <div class="publication-meta">
+              NeurIPS 2026 · Education Track
+            </div>
+
+            <p>
+              Three accepted educational resources designed to make modern AI
+              techniques explorable through practical implementations and
+              interactive demonstrations. The resources address topics across
+              contemporary AI workflows, including model inference and
+              adaptation. Individual titles and artifact links will be added
+              here as the official proceedings and final resource pages become
+              available.
+            </p>
+
+            <div class="publication-links">
+              <a
+                href="https://neurips.cc/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                NeurIPS ↗
+              </a>
+              <a
+                href="https://huggingface.co/ChandraPrakashBathula"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Hugging Face Profile ↗
+              </a>
+              <a
+                href="https://github.com/ChandraPrakash-Bathula"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub ↗
+              </a>
+            </div>
+          </article>
+
+          <article class="publication">
+            <div class="publication-top">
+              <div class="publication-type">Journal Article · 2025</div>
+              <div class="publication-status">Published</div>
+            </div>
+
+            <h3>
+              <a
+                href="https://dl.acm.org/doi/abs/10.5555/3729857.3729866"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Developing an Enterprise Application Tool to Discover Midwest
+                Job Trends
+              </a>
+            </h3>
+
+            <div class="publication-meta">
+              Journal of Computing Sciences in Colleges, Vol. 40, No. 6,
+              pp. 75–89 · First Author
+            </div>
+
+            <p>
+              An enterprise application and data pipeline for analyzing
+              employment trends across the Midwest. The work includes job
+              posting ingestion and normalization, predictive modeling, and
+              NLP-based skill extraction.
+            </p>
+
+            <div class="publication-links">
+              <a
+                href="https://dl.acm.org/doi/abs/10.5555/3729857.3729866"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Read Publication ↗
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <p class="publication-note">
+          Note: NeurIPS 2026 entries are presented according to their acceptance
+          status. The journal article is linked to its publication record.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-number">04 /</div>
+          <div>
+            <h2>Selected Projects</h2>
+            <p>
+              Research experiments, model implementations, and interactive
+              demonstrations.
+            </p>
+          </div>
+        </div>
+
+        <div class="project-list">
+          <article class="project">
+            <div class="project-number">P01</div>
+            <div>
+              <h3>Controlled CNN–Vision Transformer Benchmark</h3>
+              <p>
+                A systematic benchmark designed to study architecture and
+                initialization separately. The experimental grid covers
+                10 architectures, 9 datasets, 3 training-data fractions, and
+                2 random seeds, totaling 540 architecture–dataset–fraction–
+                seed configurations before any additional model variants or
+                repeated runs. The work investigates how scratch training and
+                pretrained initialization influence comparative conclusions.
+              </p>
+              <div class="tag-list">
+                <span class="tag">Computer Vision</span>
+                <span class="tag">CNN</span>
+                <span class="tag">ViT</span>
+                <span class="tag">Benchmarking</span>
+                <span class="tag">PyTorch</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/ChandraPrakash-Bathula"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-number">P02</div>
+            <div>
+              <h3>Expert-Branch Convolutional Modules for Visual Segmentation</h3>
+              <p>
+                Experiments combining pretrained vision transformers with
+                convolutional expert branches, including standard,
+                deformable, and depthwise-separable convolutional operators.
+                Evaluated on CAMO, COD10K, and DSAD to study whether
+                convolutional feature processing improves segmentation
+                performance over a pretrained visual backbone.
+              </p>
+              <div class="tag-list">
+                <span class="tag">Image Segmentation</span>
+                <span class="tag">Deformable Convolution</span>
+                <span class="tag">Vision Transformers</span>
+                <span class="tag">PyTorch</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/ChandraPrakash-Bathula"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-number">P03</div>
+            <div>
+              <h3>CIFAR-10 CNN Classifier</h3>
+              <p>
+                A nine-layer convolutional neural network trained for
+                CIFAR-10 image classification, with a reported test accuracy
+                of 92.59%. The implementation is available as a model artifact
+                and interactive demonstration.
+              </p>
+              <div class="tag-list">
+                <span class="tag">CNN</span>
+                <span class="tag">PyTorch</span>
+                <span class="tag">CIFAR-10</span>
+                <span class="tag">Model Evaluation</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://huggingface.co/chandu1617/CIFAR10-CNN_Model"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Model ↗
+                </a>
+                <a
+                  href="https://huggingface.co/spaces/chandu1617/cifar10-cnn-app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Live Demo ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-number">P04</div>
+            <div>
+              <h3>Food-101 Image Classification</h3>
+              <p>
+                A ResNet-50-based image classification implementation using
+                the Food-101 dataset, with model artifacts published for
+                exploration and reuse.
+              </p>
+              <div class="tag-list">
+                <span class="tag">ResNet-50</span>
+                <span class="tag">Transfer Learning</span>
+                <span class="tag">Food-101</span>
+                <span class="tag">Hugging Face</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://huggingface.co/chandu1617/Food_101_Classification_ResNet50"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Model ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-number">P05</div>
+            <div>
+              <h3>Self-Correcting Retrieval-Augmented Generation</h3>
+              <p>
+                An interactive RAG implementation exploring retrieval quality,
+                grounding, and corrective behavior. The project provides a
+                practical environment for examining how retrieval and
+                generation components work together.
+              </p>
+              <div class="tag-list">
+                <span class="tag">RAG</span>
+                <span class="tag">LLMs</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">React</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://github.com/ChandraPrakash-Bathula"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-number">P06</div>
+            <div>
+              <h3>Show the Wire: Interactive AI Tool-Calling Demonstration</h3>
+              <p>
+                An interactive demonstration of tool use in AI systems,
+                exposing the connection between model decisions, tool
+                execution, and resulting outputs.
+              </p>
+              <div class="tag-list">
+                <span class="tag">LLMs</span>
+                <span class="tag">Tool Calling</span>
+                <span class="tag">Interactive Learning</span>
+              </div>
+              <div class="project-links">
+                <a
+                  href="https://huggingface.co/spaces/ChandraPrakashBathula/show-the-wire"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Live Demo ↗
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p class="publication-note">
+          More implementations, models, datasets, and demonstrations are
+          available through the GitHub and Hugging Face profiles.
+        </p>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-number">05 /</div>
+          <div>
+            <h2>Experience</h2>
+            <p>
+              Academic teaching, applied AI development, and software engineering.
+            </p>
+          </div>
+        </div>
+
+        <div class="experience-list">
+          <article class="experience">
+            <div>
+              <div class="date">Aug 2024 – Present</div>
+              <div class="experience-location">St. Louis, Missouri</div>
+            </div>
+
+            <div>
+              <h3>Adjunct Faculty & AI Developer</h3>
+              <h4>Saint Louis University</h4>
+              <ul>
+                <li>
+                  Teach graduate-level software development, application
+                  development, and analytics courses, including IS-5200,
+                  IS-5500, IS-5600, and AA-5750.
+                </li>
+                <li>
+                  Develop course materials, programming labs, notebooks,
+                  technical demonstrations, assessments, and project-based
+                  learning experiences.
+                </li>
+                <li>
+                  Build educational modules and interactive demonstrations
+                  covering transformers, retrieval-augmented generation,
+                  agentic systems, and model adaptation.
+                </li>
+                <li>
+                  Mentor student capstone projects and guide implementation,
+                  debugging, evaluation, and software delivery.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="experience">
+            <div>
+              <div class="date">Mar 2023 – Dec 2023</div>
+              <div class="experience-location">St. Louis, Missouri</div>
+            </div>
+
+            <div>
+              <h3>Technical Intern, AI & Workflow Automation</h3>
+              <h4>Saint Louis University</h4>
+              <ul>
+                <li>
+                  Developed machine learning-assisted workflow automation
+                  and priority-routing components to support operational
+                  decision-making.
+                </li>
+                <li>
+                  Explored CNN- and ResNet-based image classification for
+                  lost-and-found workflows.
+                </li>
+                <li>
+                  Contributed to application development, model integration,
+                  and evaluation of applied AI solutions.
+                </li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="experience">
+            <div>
+              <div class="date">Mar 2021 – Jul 2022</div>
+              <div class="experience-location">Hyderabad, India</div>
+            </div>
+
+            <div>
+              <h3>Associate Software Engineer</h3>
+              <h4>Qentelli Solutions Pvt. Ltd.</h4>
+              <ul>
+                <li>
+                  Integrated machine learning models, including recurrent
+                  neural networks, tree-based methods, and CNN architectures,
+                  into software testing and quality-assurance workflows.
+                </li>
+                <li>
+                  Contributed to enterprise application development,
+                  model integration, debugging, and production-oriented
+                  software delivery.
+                </li>
+                <li>
+                  Collaborated with engineering teams to improve automated
+                  analysis and application reliability.
+                </li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-number">06 /</div>
+          <div>
+            <h2>Technical Skills</h2>
+            <p>
+              Tools and methods used across research, experimentation,
+              model development, and deployment.
+            </p>
+          </div>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-group">
+            <h3>Deep Learning & Computer Vision</h3>
+            <p>
+              PyTorch, TensorFlow, Keras, CNNs, ResNets, Vision Transformers,
+              Transformers, image classification, image segmentation,
+              transfer learning, model evaluation
+            </p>
+          </article>
+
+          <article class="skill-group">
+            <h3>Machine Learning & Data</h3>
+            <p>
+              Python, SQL, R, scikit-learn, XGBoost, gradient boosting,
+              recurrent neural networks, feature engineering,
+              experimental design, statistical analysis
+            </p>
+          </article>
+
+          <article class="skill-group">
+            <h3>Generative AI & Language Models</h3>
+            <p>
+              Hugging Face, OpenAI API, retrieval-augmented generation,
+              agentic workflows, LangChain, embeddings, vector search,
+              model adaptation, prompt engineering
+            </p>
+          </article>
+
+          <article class="skill-group">
+            <h3>Engineering & Infrastructure</h3>
+            <p>
+              FastAPI, React, Node.js, Docker, AWS, PostgreSQL, MongoDB,
+              Supabase, Git, CI/CD, cloud deployment, HPC workflows
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="education">
+      <div class="container">
+        <div class="section-heading">
+          <div class="section-number">07 /</div>
+          <div>
+            <h2>Education & Recognition</h2>
+            <p>Academic background and selected distinctions.</p>
+          </div>
+        </div>
+
+        <div class="education-list">
+          <article class="education">
+            <div>
+              <h3>Master of Science in Information Systems</h3>
+              <p>Saint Louis University, School for Professional Studies</p>
+              <p>GPA: 3.93 / 4.00</p>
+            </div>
+            <div class="education-year">May 2024</div>
+          </article>
+
+          <article class="education">
+            <div>
+              <h3>
+                Bachelor of Technology in Electronics and Computer Engineering
+              </h3>
+              <p>J.B. Institute of Engineering and Technology</p>
+            </div>
+            <div class="education-year">Jun 2021</div>
+          </article>
+        </div>
+
+        <div class="awards">
+          <span class="award">Distinguished Graduate · SLU</span>
+          <span class="award">Distinction for Research Excellence</span>
+          <span class="award">First-Author Journal Publication</span>
+          <span class="award">CCSC Central Plains Presentation · 2025</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="contact-panel">
+          <div>
+            <div class="eyebrow">Contact</div>
+            <h2>Research, collaboration, and ideas.</h2>
+            <p>
+              For discussions about computer vision, deep learning,
+              collaborative research, educational tools, or AI engineering,
+              please get in touch by email or connect through the links below.
+            </p>
+          </div>
+
+          <div class="contact-actions">
+            <a
+              class="button primary"
+              href="mailto:chandra.prakash.bathula@slu.edu"
+            >
+              Email Me ↗
+            </a>
+            <a
+              class="button"
+              href="https://scholar.google.com/citations?user=PuvoWIwAAAAJ"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Google Scholar ↗
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p>
+        © <span id="currentYear">2026</span> Chandra Prakash Bathula.
+        Built for research and open collaboration.
+      </p>
+
+      <div class="footer-links">
+        <a
+          href="https://github.com/ChandraPrakash-Bathula"
+          target="_blank"
+          rel="noopener noreferrer"
+        >GitHub</a>
+        <a
+          href="https://www.linkedin.com/in/chandra-prakash-bathula/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >LinkedIn</a>
+        <a
+          href="https://huggingface.co/ChandraPrakashBathula"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Hugging Face</a>
+        <a
+          href="https://medium.com/@ChandraPrakash-Bathula"
+          target="_blank"
+          rel="noopener noreferrer"
+        >Medium</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("open");
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+      });
+    });
+
+    document.getElementById("currentYear").textContent =
+      new Date().getFullYear();
   </script>
 </body>
 </html>
